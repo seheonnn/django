@@ -1,6 +1,7 @@
 from django.views.generic import ListView, DetailView
 from .models import Post
 
+# CBV 방식
 class PostList(ListView):
     model = Post
     ordering = '-pk'
@@ -8,7 +9,7 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
 
-#
+# FBV 방식
 # def index(request):
 #     posts = Post.objects.all().order_by('-pk') # 최신 글부터 맨 위에 배치
 #
