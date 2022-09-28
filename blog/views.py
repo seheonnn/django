@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Post
 
@@ -9,7 +10,7 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
 
-# FBV 방식
+# # FBV 방식
 # def index(request):
 #     posts = Post.objects.all().order_by('-pk') # 최신 글부터 맨 위에 배치
 #
@@ -20,7 +21,7 @@ class PostDetail(DetailView):
 #             'posts': posts
 #         }
 #     )
-
+#
 # def single_post_page(request, pk):
 #     post = Post.objects.get(pk=pk)
 #
